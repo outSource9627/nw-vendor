@@ -4,6 +4,12 @@ on:
   pull_request:
     types: [opened, synchronize, reopened]
 
+permissions:
+  issues: write
+  pull-requests: write
+  id-token: write
+  contents: read
+
 jobs:
   review:
     uses: outSource9627/xenotix-github-workflows/.github/workflows/claude-review-reusable.yml@main
